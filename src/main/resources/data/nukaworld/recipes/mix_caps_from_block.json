@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_mix_cap_block"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:mix_cap",
+    "count": 9
+  }
+}

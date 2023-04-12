@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_victory_cap_block"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:victory_cap",
+    "count": 9
+  }
+}

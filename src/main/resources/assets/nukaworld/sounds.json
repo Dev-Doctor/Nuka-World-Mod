@@ -1,0 +1,16 @@
+{
+  "nuka_cola_drink": {
+    "subtitle": "sounds.nukaworld.nuka_cola_drink",
+    "sounds": [
+      "nukaworld:nuka_cola_drink"
+    ]
+  },
+  "nuka_world_theme": {
+    "sounds": [
+      {
+        "name": "nukaworld:nuka_world_theme",
+        "stream": true
+      }
+    ]
+  }
+}

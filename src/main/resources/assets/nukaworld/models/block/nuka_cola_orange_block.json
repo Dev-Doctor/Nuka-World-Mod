@@ -1,0 +1,8 @@
+{
+  "parent": "nukaworld:custom/nuka_cola_bottle",
+  "textures": {
+    "all": "nukaworld:block/nuka_cola_orange",
+    "particle": "nukaworld:block/nuka_cola_orange",
+    "2": "nukaworld:block/nuka_cola_orange"
+  }
+}

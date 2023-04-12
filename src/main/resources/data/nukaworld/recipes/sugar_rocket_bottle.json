@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nukaworld:water_rocket_bottle"
+    },
+    {
+      "item": "nukaworld:concentrated_sugar"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:sugar_rocket_bottle",
+    "count": 1
+  }
+}

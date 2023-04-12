@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nukaworld:mix_cap"
+    }
+  },
+  "result": {
+    "item": "nukaworld:nuka_mix_cap_block",
+    "count": 1
+  }
+}

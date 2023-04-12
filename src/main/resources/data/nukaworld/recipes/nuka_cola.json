@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nukaworld:sugar_rocket_bottle"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:nuka_cola",
+    "count": 1
+  }
+}

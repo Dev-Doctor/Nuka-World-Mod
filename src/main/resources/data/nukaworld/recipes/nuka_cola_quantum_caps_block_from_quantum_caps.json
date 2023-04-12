@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nukaworld:quantum_cap"
+    }
+  },
+  "result": {
+    "item": "nukaworld:nuka_quantum_cap_block",
+    "count": 1
+  }
+}
