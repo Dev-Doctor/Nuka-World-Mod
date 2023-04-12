@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nukaworld:cide_cap"
+    }
+  },
+  "result": {
+    "item": "nukaworld:nuka_cide_cap_block",
+    "count": 1
+  }
+}

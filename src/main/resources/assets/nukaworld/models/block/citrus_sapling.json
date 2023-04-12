@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "nukaworld:block/citrus_sapling"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cide_cap_block"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:cide_cap",
+    "count": 9
+  }
+}

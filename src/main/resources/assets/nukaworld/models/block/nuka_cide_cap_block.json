@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "nukaworld:block/block_cap_cide_top",
+    "up": "nukaworld:block/block_cap_cide_top",
+    "north": "nukaworld:block/block_cap_cide",
+    "east": "nukaworld:block/block_cap_cide",
+    "south": "nukaworld:block/block_cap_cide",
+    "west": "nukaworld:block/block_cap_cide",
+    "particle": "nukaworld:block/block_cap_cide_top"
+  }
+}

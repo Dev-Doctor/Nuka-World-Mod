@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": { "model": "nukaworld:block/tato_stage0" },
+    "age=1": { "model": "nukaworld:block/tato_stage1" },
+    "age=2": { "model": "nukaworld:block/tato_stage2" },
+    "age=3": { "model": "nukaworld:block/tato_stage3" },
+    "age=4": { "model": "nukaworld:block/tato_stage4" },
+    "age=5": { "model": "nukaworld:block/tato_stage5" }
+  }
+}
