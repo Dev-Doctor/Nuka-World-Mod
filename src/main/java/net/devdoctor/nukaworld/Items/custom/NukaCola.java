@@ -6,6 +6,7 @@ import net.devdoctor.nukaworld.sound.ModSounds;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -67,10 +68,7 @@ public class NukaCola extends BlockItem {
         return InteractionResult.FAIL;
     }
 
-    @Override
-    public SoundEvent getEatingSound() {
-        return ModSounds.NUKA_COLA_DRINK.get();
-    }
+
 
     @Override
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
@@ -79,6 +77,10 @@ public class NukaCola extends BlockItem {
             CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer)player, pStack);
         }
 
+        // PLAY DRINK SOUND
+        pLevel.playSound(player, player.blockPosition(), ModSounds.NUKA_COLA_DRINK.get(), SoundSource.PLAYERS, 10, 1);
+
+        // ADD NUKA COLA EFFECTS
         if (!pLevel.isClientSide) {
             if(effects != null) {
                 for(MobEffectInstance effect : this.effects) {
@@ -87,12 +89,14 @@ public class NukaCola extends BlockItem {
             }
         }
 
+        // REMOVE 1 ITEM
         if (player != null) {
             if (!player.getAbilities().instabuild) {
                 pStack.shrink(1);
             }
         }
 
+        // "DROP" LOGIC
         if (player == null || !player.getAbilities().instabuild) {
             if (pStack.isEmpty()) {
                 player.getInventory().add(new ItemStack(CAP_TYPE));

@@ -65,6 +65,8 @@
   "itemGroup.nukaworld_tab": "NukaWorld - Components",
 
 
-  "advancement.root.title": "NukaCraft",
-  "advancement.root.description": "NukaCola minecraft mod"
+  "advancement.root.title": "NukaCola",
+  "advancement.root.description": "NukaCola minecraft mod",
+  "advancement.obtain_nuka_cola.title": "The Original Taste",
+  "advancement.obtain_nuka_cola.description": "Obtain your first NukaCola!"
 }

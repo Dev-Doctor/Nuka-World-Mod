@@ -5,6 +5,7 @@ import net.devdoctor.nukaworld.CreativeTabs.ModCreativeTabs;
 import net.devdoctor.nukaworld.Items.custom.*;
 import net.devdoctor.nukaworld.NukaFlavors;
 import net.devdoctor.nukaworld.NukaWorld;
+import net.devdoctor.nukaworld.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,6 +33,7 @@ public class ModItems {
     public static final RegistryObject<Item> NUKA_COLA_WILD = ITEMS.register("nuka_cola_wild", () -> new NukaCola(ModBlocks.NUKA_COLA_WILD.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_WILD), NukaFlavors.NUKA_COLA_WILD));
     public static final RegistryObject<Item> NUKA_COLA_QUANTUM = ITEMS.register("nuka_cola_quantum", () -> new NukaCola(ModBlocks.NUKA_COLA_QUANTUM.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_QUANTUM), NukaFlavors.NUKA_COLA_QUANTUM));
     public static final RegistryObject<Item> NUKA_COLA_VICTORY = ITEMS.register("nuka_cola_victory", () -> new NukaCola(ModBlocks.NUKA_COLA_VICTORY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_VICTORY), NukaFlavors.NUKA_COLA_VICTORY));
+
     /* -------------------- MIXS -------------------- */
     public static final RegistryObject<Item> NEWKA_COLA = ITEMS.register("newka_cola", () -> new NewkaCola(ModBlocks.NEWKA_COLA.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NEWKA_COLA)));
     public static final RegistryObject<Item> NUKA_BERRY = ITEMS.register("nuka_berry", () -> new NukaBerry(ModBlocks.NUKA_BERRY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_BERRY)));
@@ -58,7 +60,7 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTY_ROCKET_BOTTLE = ITEMS.register("empty_rocket_bottle", () -> new EmptyRocketBottle(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> WATER_ROCKET_BOTTLE = ITEMS.register("water_rocket_bottle", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> SUGAR_ROCKET_BOTTLE = ITEMS.register("sugar_rocket_bottle", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
-    // public static final RegistryObject<Item> NUKA_WORLD_THEME = ITEMS.register("nuka_world_theme_disc", () -> new RecordItem(4, ModSounds.NUKA_WORLD_THEME, new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD).stacksTo(1))); NEED TO UPDATE, DOESN'T WORK IN 1.19.2
+    public static final RegistryObject<Item> NUKA_WORLD_THEME = ITEMS.register("nuka_world_theme_disc", () -> new RecordItem(4, ModSounds.NUKA_WORLD_THEME, new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD).stacksTo(1).rarity(Rarity.RARE), 1580));
     public static final RegistryObject<Item> BOTTLE_OPENER = ITEMS.register("bottle_opener", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> CONCENTRATED_SUGAR = ITEMS.register("concentrated_sugar", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> TATO = ITEMS.register("tato", () -> new ItemNameBlockItem(ModBlocks.TATO_PLANT.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.TATO)));
