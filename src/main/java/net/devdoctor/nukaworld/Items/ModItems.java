@@ -3,8 +3,8 @@ package net.devdoctor.nukaworld.Items;
 import net.devdoctor.nukaworld.Blocks.ModBlocks;
 import net.devdoctor.nukaworld.CreativeTabs.ModCreativeTabs;
 import net.devdoctor.nukaworld.Items.custom.*;
+import net.devdoctor.nukaworld.NukaFlavors;
 import net.devdoctor.nukaworld.NukaWorld;
-import net.devdoctor.nukaworld.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,15 +23,15 @@ public class ModItems {
     public static final RegistryObject<Item> NUKA_COLA_CIDE_CAP = ITEMS.register("cide_cap", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
 
     /* -------------------- NUKA-COLAS -------------------- */
-    public static final RegistryObject<Item> NUKA_COLA = ITEMS.register("nuka_cola", () -> new NukaCola(ModBlocks.NUKA_COLA.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA)));
-    public static final RegistryObject<Item> NUKA_COLA_CHERRY = ITEMS.register("nuka_cola_cherry", () -> new NukaColaCherry(ModBlocks.NUKA_COLA_CHERRY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_CHERRY)));
-    public static final RegistryObject<Item> NUKA_COLA_DARK = ITEMS.register("nuka_cola_dark", () -> new NukaColaDark(ModBlocks.NUKA_COLA_DARK.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_DARK)));
-    public static final RegistryObject<Item> NUKA_COLA_GRAPE = ITEMS.register("nuka_cola_grape", () -> new NukaColaGrape(ModBlocks.NUKA_COLA_GRAPE.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_GRAPE)));
-    public static final RegistryObject<Item> NUKA_COLA_ORANGE = ITEMS.register("nuka_cola_orange", () -> new NukaColaOrange(ModBlocks.NUKA_COLA_ORANGE.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_ORANGE)));
-    public static final RegistryObject<Item> NUKA_COLA_QUARTZ = ITEMS.register("nuka_cola_quartz", () -> new NukaColaQuartz(ModBlocks.NUKA_COLA_QUARTZ.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_QUARTZ)));
-    public static final RegistryObject<Item> NUKA_COLA_WILD = ITEMS.register("nuka_cola_wild", () -> new NukaColaWild(ModBlocks.NUKA_COLA_WILD.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_WILD)));
-    public static final RegistryObject<Item> NUKA_COLA_QUANTUM = ITEMS.register("nuka_cola_quantum", () -> new NukaColaQuantum(ModBlocks.NUKA_COLA_QUANTUM.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_QUANTUM)));
-    public static final RegistryObject<Item> NUKA_COLA_VICTORY = ITEMS.register("nuka_cola_victory", () -> new NukaColaVictory(ModBlocks.NUKA_COLA_VICTORY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_VICTORY)));
+    public static final RegistryObject<Item> NUKA_COLA = ITEMS.register("nuka_cola", () -> new NukaCola(ModBlocks.NUKA_COLA.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA), NukaFlavors.NUKA_COLA));
+    public static final RegistryObject<Item> NUKA_COLA_CHERRY = ITEMS.register("nuka_cola_cherry", () -> new NukaCola(ModBlocks.NUKA_COLA_CHERRY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_CHERRY), NukaFlavors.NUKA_COLA_CHERRY));
+    public static final RegistryObject<Item> NUKA_COLA_DARK = ITEMS.register("nuka_cola_dark", () -> new NukaCola(ModBlocks.NUKA_COLA_DARK.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_DARK), NukaFlavors.NUKA_COLA_DARK));
+    public static final RegistryObject<Item> NUKA_COLA_GRAPE = ITEMS.register("nuka_cola_grape", () -> new NukaCola(ModBlocks.NUKA_COLA_GRAPE.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_GRAPE), NukaFlavors.NUKA_COLA_GRAPE));
+    public static final RegistryObject<Item> NUKA_COLA_ORANGE = ITEMS.register("nuka_cola_orange", () -> new NukaCola(ModBlocks.NUKA_COLA_ORANGE.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_ORANGE), NukaFlavors.NUKA_COLA_ORANGE));
+    public static final RegistryObject<Item> NUKA_COLA_QUARTZ = ITEMS.register("nuka_cola_quartz", () -> new NukaCola(ModBlocks.NUKA_COLA_QUARTZ.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_QUARTZ), NukaFlavors.NUKA_COLA_QUARTZ));
+    public static final RegistryObject<Item> NUKA_COLA_WILD = ITEMS.register("nuka_cola_wild", () -> new NukaCola(ModBlocks.NUKA_COLA_WILD.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_WILD), NukaFlavors.NUKA_COLA_WILD));
+    public static final RegistryObject<Item> NUKA_COLA_QUANTUM = ITEMS.register("nuka_cola_quantum", () -> new NukaCola(ModBlocks.NUKA_COLA_QUANTUM.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_QUANTUM), NukaFlavors.NUKA_COLA_QUANTUM));
+    public static final RegistryObject<Item> NUKA_COLA_VICTORY = ITEMS.register("nuka_cola_victory", () -> new NukaCola(ModBlocks.NUKA_COLA_VICTORY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_COLA_VICTORY), NukaFlavors.NUKA_COLA_VICTORY));
     /* -------------------- MIXS -------------------- */
     public static final RegistryObject<Item> NEWKA_COLA = ITEMS.register("newka_cola", () -> new NewkaCola(ModBlocks.NEWKA_COLA.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NEWKA_COLA)));
     public static final RegistryObject<Item> NUKA_BERRY = ITEMS.register("nuka_berry", () -> new NukaBerry(ModBlocks.NUKA_BERRY.get(), new Item.Properties().tab(ModCreativeTabs.NUKA_COLAS).food(ModFoods.NUKA_BERRY)));

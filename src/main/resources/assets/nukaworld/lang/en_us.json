@@ -62,5 +62,9 @@
   "sounds.nukaworld.nuka_cola_drink": "Drinks Nuka-Cola",
 
   "itemGroup.nukacola_tab": "NukaWorld - NukaColas",
-  "itemGroup.nukaworld_tab": "NukaWorld - Components"
+  "itemGroup.nukaworld_tab": "NukaWorld - Components",
+
+
+  "advancement.root.title": "NukaCraft",
+  "advancement.root.description": "NukaCola minecraft mod"
 }

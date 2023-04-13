@@ -1,7 +1,7 @@
 package net.devdoctor.nukaworld.Items.custom;
 
 import net.devdoctor.nukaworld.Items.ModItems;
-import net.devdoctor.nukaworld.NukaColaTypes;
+import net.devdoctor.nukaworld.NukaFlavors;
 import net.devdoctor.nukaworld.sound.ModSounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
 public class NukaCooler extends BlockItem {
-    ItemLike CAP_TYPE = NukaColaTypes.NUKA_COLA_MIX.cap_id;
+    ItemLike CAP_TYPE = NukaFlavors.NUKA_COLA_MIX.cap_id;
     private Block block;
 
     public NukaCooler(Block pBlock, Properties pProperties) {

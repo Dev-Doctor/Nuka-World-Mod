@@ -1,12 +1,15 @@
 package net.devdoctor.nukaworld.Items.custom;
 
 import net.devdoctor.nukaworld.Items.ModItems;
-import net.devdoctor.nukaworld.NukaColaTypes;
+import net.devdoctor.nukaworld.NukaFlavors;
 import net.devdoctor.nukaworld.sound.ModSounds;
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -15,14 +18,31 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
+import java.util.List;
+
 public class NukaCola extends BlockItem {
-    //BlockState NUKA_FLAVOR = ModBlocks.NUKA_COLA.get().defaultBlockState();
-    ItemLike CAP_TYPE = NukaColaTypes.NUKA_COLA.cap_id;
+    ItemLike CAP_TYPE = NukaFlavors.NUKA_COLA.cap_id;
+    private List<MobEffectInstance> effects;
+    // effects list array
+
     private Block block;
 
     public NukaCola(Block pBlock, Item.Properties pProperties) {
         super(pBlock, pProperties);
         this.block = pBlock;
+        this.effects = null;
+    }
+
+    @Override
+    public ItemStack getDefaultInstance() {
+        return new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get());
+    }
+
+    public NukaCola(Block pBlock, Item.Properties pProperties, NukaFlavors flavour) {
+        super(pBlock, pProperties);
+        this.CAP_TYPE = flavour.cap_id;
+        this.block = pBlock;
+        this.effects = flavour.effects;
     }
 
     @Override
@@ -54,11 +74,37 @@ public class NukaCola extends BlockItem {
 
     @Override
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
-        if(pLivingEntity instanceof Player) {
-            Player player = (Player) pLivingEntity;
-            player.addItem(new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get(), 1));
-            player.addItem(new ItemStack(CAP_TYPE, 1));
+        Player player = pLivingEntity instanceof Player ? (Player)pLivingEntity : null;
+        if (player instanceof ServerPlayer) {
+            CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer)player, pStack);
         }
-        return super.finishUsingItem(pStack, pLevel, pLivingEntity);
+
+        if (!pLevel.isClientSide) {
+            if(effects != null) {
+                for(MobEffectInstance effect : this.effects) {
+                    player.addEffect(effect);
+                }
+            }
+        }
+
+        if (player != null) {
+            if (!player.getAbilities().instabuild) {
+                pStack.shrink(1);
+            }
+        }
+
+        if (player == null || !player.getAbilities().instabuild) {
+            if (pStack.isEmpty()) {
+                player.getInventory().add(new ItemStack(CAP_TYPE));
+                return new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get());
+            }
+
+            if (player != null) {
+                player.getInventory().add(new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get()));
+                player.getInventory().add(new ItemStack(CAP_TYPE));
+            }
+        }
+
+        return pStack;
     }
 }
