@@ -59,7 +59,7 @@ public class ModItems {
     /* -------------------- OTHER ITEMS -------------------- */
     public static final RegistryObject<Item> EMPTY_ROCKET_BOTTLE = ITEMS.register("empty_rocket_bottle", () -> new EmptyRocketBottle(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> WATER_ROCKET_BOTTLE = ITEMS.register("water_rocket_bottle", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
-    public static final RegistryObject<Item> SUGAR_ROCKET_BOTTLE = ITEMS.register("sugar_rocket_bottle", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
+    public static final RegistryObject<Item> SUGAR_ROCKET_BOTTLE = ITEMS.register("sugar_rocket_bottle", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD).food(ModFoods.SUGAR_BOTTLE)));
     public static final RegistryObject<Item> NUKA_WORLD_THEME = ITEMS.register("nuka_world_theme_disc", () -> new RecordItem(4, ModSounds.NUKA_WORLD_THEME, new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD).stacksTo(1).rarity(Rarity.RARE), 1580));
     public static final RegistryObject<Item> BOTTLE_OPENER = ITEMS.register("bottle_opener", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeTabs.NUKA_WORLD)));
     public static final RegistryObject<Item> CONCENTRATED_SUGAR = ITEMS.register("concentrated_sugar", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));

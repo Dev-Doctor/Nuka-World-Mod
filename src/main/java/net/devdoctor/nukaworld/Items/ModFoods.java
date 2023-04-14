@@ -34,6 +34,9 @@ public class ModFoods {
     public static final FoodProperties NUKA_VOID = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.1F).alwaysEat().build();
     public static final FoodProperties NUKA_XTREME = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.1F).alwaysEat().build();
     /** OTHER FOODS **/
+    public static final FoodProperties SUGAR_BOTTLE = (new FoodProperties.Builder()).alwaysEat().build();
+
+
     public static final FoodProperties TATO = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).build();
     public static final FoodProperties CARROT_FLOWER = (new FoodProperties.Builder()).nutrition(1).saturationMod(.2f).fast().build();
     public static final FoodProperties ORANGE = (new FoodProperties.Builder()).nutrition(4).saturationMod(.3f).build();

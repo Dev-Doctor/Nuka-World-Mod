@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_cola_wild"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_cola_wild.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_cola_wild.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/obtain_nuka_cola",
+  "criteria": {
+    "nukacola": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_cola_wild"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukacola"
+    ]
+  ]
+}

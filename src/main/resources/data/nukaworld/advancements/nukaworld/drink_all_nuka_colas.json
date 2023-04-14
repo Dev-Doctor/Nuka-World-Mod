@@ -1,0 +1,157 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_cola"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_cola.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_cola.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukacola": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolacherry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_cherry"
+            }
+          }
+        ]
+      }
+    },
+    "nukacoladark": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_dark"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolagrape": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_grape"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolaorange": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_orange"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolaquartz": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_quartz"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolawild": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_wild"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolaquantum": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_quantum"
+            }
+          }
+        ]
+      }
+    },
+    "nukacolavictory": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": [
+          {
+            "item": {
+              "item": "nukacola:nuka_cola_victory"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukaworld:nukacola"
+    ],
+    [
+      "nukaworld:nukacolacherry"
+    ],
+    [
+      "nukaworld:nukacoladark"
+    ],
+    [
+      "nukaworld:nukacolagrape"
+    ],
+    [
+      "nukaworld:nukacolaorange"
+    ],
+    [
+      "nukaworld:nukacolaquartz"
+    ],
+    [
+      "nukaworld:nukacolawild"
+    ],
+    [
+      "nukaworld:nukacolaquantum"
+    ],
+    [
+      "nukaworld:nukacolavictory"
+    ]
+  ]
+}

@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "nukaworld:nuka_cola_cherry"
+      "item": "nukaworld:nuka_cola_orange"
     },
     "title": {
-      "translate": "advancement.obtain_nuka_cherry.title"
+      "translate": "advancement.obtain_nuka_cola_orange.title"
     },
     "description": {
-      "translate": "advancement.obtain_nuka_cherry.description"
+      "translate": "advancement.obtain_nuka_cola_orange.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nukaworld:nukaworld/obtain_nuka_cola",
+  "parent": "nukaworld:nukaworld/root",
   "criteria": {
     "nukacola": {
       "trigger": "minecraft:inventory_changed",
@@ -22,7 +22,7 @@
         "items": [
           {
             "items": [
-              "nukaworld:nuka_cola_cherry"
+              "nukaworld:nuka_cola_orange"
             ]
           }
         ]

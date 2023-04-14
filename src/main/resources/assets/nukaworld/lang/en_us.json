@@ -64,9 +64,25 @@
   "itemGroup.nukacola_tab": "NukaWorld - NukaColas",
   "itemGroup.nukaworld_tab": "NukaWorld - Components",
 
-
-  "advancement.root.title": "NukaCola",
-  "advancement.root.description": "NukaCola minecraft mod",
+  "advancement.root.title": "Nuka-Cola",
+  "advancement.root.description": "Nuka-Cola Minecraft Mod",
   "advancement.obtain_nuka_cola.title": "The Original Taste",
-  "advancement.obtain_nuka_cola.description": "Obtain your first NukaCola!"
+  "advancement.obtain_nuka_cola.description": "Obtain the original Nuka-Cola",
+  "advancement.obtain_nuka_cola_cherry.title": "Nuka-Cola Cherry",
+  "advancement.obtain_nuka_cola_cherry.description": "Obtain a Nuka-Cola Cherry",
+  "advancement.obtain_nuka_cola_dark.title": "Nuka-Cola Dark",
+  "advancement.obtain_nuka_cola_dark.description": "Obtain a Nuka-Cola Dark",
+  "advancement.obtain_nuka_cola_grape.title": "Nuka-Cola Grape",
+  "advancement.obtain_nuka_cola_grape.description": "Obtain a Nuka-Cola Grape",
+  "advancement.obtain_nuka_cola_orange.title": "Nuk-aCola Orange",
+  "advancement.obtain_nuka_cola_orange.description": "Obtain a Nuka-Cola Orange",
+  "advancement.obtain_nuka_cola_quantum.title": "Quantum taste for the atomic age!",
+  "advancement.obtain_nuka_cola_quantum.description": "Obtain a Nuka-Cola QuanTum",
+  "advancement.obtain_nuka_cola_quartz.title": "Same Taste! Crystal Clean!",
+  "advancement.obtain_nuka_cola_quartz.description": "Obtain a Nuka-Cola Quartz",
+  "advancement.obtain_nuka_cola_victory.title": "Taste the Freedom!",
+  "advancement.obtain_nuka_cola_victory.description": "Obtain a Nuka-Cola Victory",
+  "advancement.obtain_nuka_cola_wild.title": "Nuka-Cola Wild",
+  "advancement.obtain_nuka_cola_wild.description": "Obtain a Nuka-Cola Wild",
+  "dad": "for that burst of Atomic Energy"
 }
