@@ -23,7 +23,7 @@ public enum NukaFlavors {
     )),
     NUKA_COLA_VICTORY(ModItems.NUKA_COLA_VICTORY_CAP.get(), null),
     NUKA_COLA_MIX(ModItems.NUKA_COLA_MIX_CAP.get(), null),
-    NUKA_COLA_CIDE(ModItems.NUKA_COLA_MIX_CAP.get(), null);
+    NUKA_COLA_CIDE(ModItems.NUKA_COLA_CIDE_CAP.get(), null);
 
     final public ItemLike cap_id;
     final public List<MobEffectInstance> effects;

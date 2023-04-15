@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_lixir"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_lixir.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_lixir.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukalixir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_lixir"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukalixir"
+    ]
+  ]
+}

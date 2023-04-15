@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_sunrise"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_sunrise.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_sunrise.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukasunrise": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_sunrise"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukasunrise"
+    ]
+  ]
+}

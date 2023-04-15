@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "nukaworld:nuka_cola_victory"
+      "item": "nukaworld:nuka_cola"
     },
     "title": {
-      "translate": "advancement.drink_all_nukacolas.title"
+      "translate": "advancement.drink_all_original_nukacolas.title"
     },
     "description": {
-      "translate": "advancement.drink_all_nukacolas.description"
+      "translate": "advancement.drink_all_original_nukacolas.description"
     },
-    "frame": "challenge",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nukaworld:nukaworld/drink_all_original_nuka_colas",
+  "parent": "nukaworld:nukaworld/root",
   "criteria": {
     "nukacola": {
       "trigger": "minecraft:consume_item",

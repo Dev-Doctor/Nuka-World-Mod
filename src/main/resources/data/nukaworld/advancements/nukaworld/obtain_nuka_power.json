@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_power"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_power.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_power.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukapower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_power"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukapower"
+    ]
+  ]
+}

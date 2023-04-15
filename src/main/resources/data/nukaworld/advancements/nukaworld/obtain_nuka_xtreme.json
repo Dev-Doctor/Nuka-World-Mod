@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_xtreme"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_xtreme.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_xtreme.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukaxtreme": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_xtreme"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukaxtreme"
+    ]
+  ]
+}

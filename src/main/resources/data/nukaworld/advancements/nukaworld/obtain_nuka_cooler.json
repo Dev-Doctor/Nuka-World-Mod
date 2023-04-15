@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:nuka_cooler"
+    },
+    "title": {
+      "translate": "advancement.obtain_nuka_cooler.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_nuka_cooler.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "nukacooler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:nuka_cooler"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nukacooler"
+    ]
+  ]
+}

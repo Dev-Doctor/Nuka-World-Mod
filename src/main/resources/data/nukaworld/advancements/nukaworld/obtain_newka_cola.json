@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nukaworld:newka_cola"
+    },
+    "title": {
+      "translate": "advancement.obtain_newka_cola.title"
+    },
+    "description": {
+      "translate": "advancement.obtain_newka_cola.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nukaworld:nukaworld/root",
+  "criteria": {
+    "newkacola": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nukaworld:newka_cola"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "newkacola"
+    ]
+  ]
+}
