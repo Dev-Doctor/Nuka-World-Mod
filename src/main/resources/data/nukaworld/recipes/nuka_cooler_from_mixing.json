@@ -1,0 +1,17 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola_quantum"
+    },
+    {
+      "item": "nukaworld:nuka_cola_victory"
+    },
+    {
+      "item": "nukaworld:nuka_cola_quartz"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_cooler"
+  }
+}

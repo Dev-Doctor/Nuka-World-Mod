@@ -1,0 +1,14 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola_cherry"
+    },
+    {
+      "item": "nukaworld:nuka_cola_quartz"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_love"
+  }
+}

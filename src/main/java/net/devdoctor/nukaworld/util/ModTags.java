@@ -22,7 +22,8 @@ public class ModTags {
     }
 
     public static class Items {
-        //public static final TagKey<Item> ZINC_ORE = tag("zinc_ore");
+        public static final TagKey<Item> NUKACOLAS = tag("nukacolas");
+        public static final TagKey<Item> NUKAMIXES = tag("nukamixes");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(NukaWorld.MOD_ID, name));

@@ -1,0 +1,14 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola_quantum"
+    },
+    {
+      "item": "nukaworld:nuka_cola_dark"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_void"
+  }
+}

@@ -72,7 +72,7 @@ public class ModBlocks {
     /* -------------------- OTHER BLOCKS -------------------- */
     public static final RegistryObject<Block> SUPER_CONCENTRATED_SUGAR = registerBlock("super_concentrated_sugar", () -> new SandBlock(14406560, BlockBehaviour.Properties.copy(Blocks.SAND)), ModCreativeTabs.NUKA_WORLD);
     public static final RegistryObject<Block> TATO_PLANT = registerBlockWithoutItem("tato_plant", () -> new TatoPlantBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion()));
-    // - BROKEN - public static final RegistryObject<Block> MIXING_STATION = registerBlock("mixing_station", () -> new MixingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeTabs.NUKA_WORLD);
+    public static final RegistryObject<Block> MIXING_STATION = registerBlock("mixing_station", () -> new MixingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeTabs.NUKA_WORLD);
 
     /* -------------------------- NEED TO UPDATE, DOESN'T WORK IN 1.19.2 -------------------------- */
     //public static final RegistryObject<Block> CITRUS_SAPLING = registerBlock("citrus_sapling", () -> new SaplingBlock(new CitrusTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTabs.NUKA_WORLD);

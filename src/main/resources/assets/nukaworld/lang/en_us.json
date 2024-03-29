@@ -59,10 +59,15 @@
   "block.nukaworld.citrus_leaves": "Citrus Leaves",
   "block.nukaworld.citrus_sapling": "Citrus Sapling",
 
+  "blockentity.nukaworld.mixingstation.displayname": "Nuka-Cola Mixing Station",
+  "block.nukaworld.mixing_station": "Nuka-Cola Mixing Station",
+
   "sounds.nukaworld.nuka_cola_drink": "Drinks Nuka-Cola",
 
   "itemGroup.nukacola_tab": "NukaWorld - NukaColas",
   "itemGroup.nukaworld_tab": "NukaWorld - Components",
+
+
 
   "advancement.root.title": "Nuka-Cola",
   "advancement.root.description": "Nuka-Cola Minecraft Mod",
@@ -91,7 +96,7 @@
   "advancement.obtain_nuka_cola_wild.title": "Nuka-Cola Wild",
   "advancement.obtain_nuka_cola_wild.description": "Obtain a Nuka-Cola Wild",
 
-  "dad": "for that burst of Atomic Energy",
+  "saved": "for that burst of Atomic Energy",
 
   "advancement.obtain_newka_cola.title": "Newka-Cola",
   "advancement.obtain_newka_cola.description": "Mix a Newka-Cola",
@@ -113,7 +118,7 @@
   "advancement.obtain_nuka_frutti.description": "Mix a Nuka-Frutti",
   "advancement.obtain_nuka_hearty.title": "Nuka-Hearty",
   "advancement.obtain_nuka_hearty.description": "Mix a Nuka-Hearty",
-  "advancement.obtain_nuka_lixir.title": "Mix a Nuka-Lixir",
+  "advancement.obtain_nuka_lixir.title": "Nuka-Lixir",
   "advancement.obtain_nuka_lixir.description": "Mix a Nuka-Lixir",
   "advancement.obtain_nuka_love.title": "Nuka-Love",
   "advancement.obtain_nuka_love.description": "Mix a Nuka-Love",

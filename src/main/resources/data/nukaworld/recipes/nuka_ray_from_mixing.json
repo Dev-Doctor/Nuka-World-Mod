@@ -1,0 +1,14 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola_victory"
+    },
+    {
+      "item": "nukaworld:nuka_cola_orange"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_ray"
+  }
+}

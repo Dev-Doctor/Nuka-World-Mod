@@ -2,9 +2,13 @@ package net.devdoctor.nukaworld;
 
 import com.mojang.logging.LogUtils;
 import net.devdoctor.nukaworld.Blocks.ModBlocks;
-//import net.devdoctor.nukaworld.Blocks.entity.ModBlockEntities;
+import net.devdoctor.nukaworld.Blocks.entity.ModBlockEntities;
 import net.devdoctor.nukaworld.Items.ModItems;
+import net.devdoctor.nukaworld.recipe.ModRecipes;
+import net.devdoctor.nukaworld.screen.MixingStationScreen;
+import net.devdoctor.nukaworld.screen.ModMenuTypes;
 import net.devdoctor.nukaworld.sound.ModSounds;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -42,7 +46,13 @@ public class NukaWorld {
         ModSounds.register(eventBus);
 
         //REGISTER BLOCK ENTITIES
-        //ModBlockEntities.register(eventBus);
+        ModBlockEntities.register(eventBus);
+
+        //REGISTER GUIs
+        ModMenuTypes.register(eventBus);
+
+        // REGISTER RECIPES
+        ModRecipes.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -54,6 +64,8 @@ public class NukaWorld {
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.TATO_PLANT.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.CITRUS_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.CITRUS_LEAVES.get(), RenderType.cutout());
+
+        MenuScreens.register(ModMenuTypes.MIXING_STATION_MENU.get(), MixingStationScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

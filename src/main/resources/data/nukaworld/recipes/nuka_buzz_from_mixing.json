@@ -1,0 +1,14 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola_wild"
+    },
+    {
+      "item": "nukaworld:nuka_cola_wild"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_buzz"
+  }
+}

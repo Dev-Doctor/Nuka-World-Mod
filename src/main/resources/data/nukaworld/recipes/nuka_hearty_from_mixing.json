@@ -1,0 +1,20 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola"
+    },
+    {
+      "item": "nukaworld:nuka_cola_dark"
+    },
+    {
+      "item": "nukaworld:tato"
+    },
+    {
+      "item": "nukaworld:carrot_flower"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_hearty"
+  }
+}
