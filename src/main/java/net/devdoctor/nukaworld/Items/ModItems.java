@@ -66,6 +66,10 @@ public class ModItems {
     public static final RegistryObject<Item> TATO = ITEMS.register("tato", () -> new ItemNameBlockItem(ModBlocks.TATO_PLANT.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.TATO)));
     public static final RegistryObject<Item> CARROT_FLOWER = ITEMS.register("carrot_flower", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.CARROT_FLOWER)));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.ORANGE)));
+    public static final RegistryObject<Item> RUM = ITEMS.register("rum", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
+    public static final RegistryObject<Item> VODKA = ITEMS.register("vodka", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
+    public static final RegistryObject<Item> BOURBON = ITEMS.register("bourbon", () -> new Item(new Item.Properties().tab(ModCreativeTabs.NUKA_WORLD)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

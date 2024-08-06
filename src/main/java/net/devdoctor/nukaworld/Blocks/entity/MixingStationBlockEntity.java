@@ -4,16 +4,12 @@ import net.devdoctor.nukaworld.Items.ModItems;
 import net.devdoctor.nukaworld.recipe.MixingStationRecipe;
 import net.devdoctor.nukaworld.screen.MixingStationMenu;
 import net.devdoctor.nukaworld.util.ModTags;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -21,21 +17,18 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.plaf.basic.BasicComboBoxUI;
 import java.util.Optional;
 
 public class MixingStationBlockEntity extends BlockEntity implements MenuProvider {
@@ -91,7 +84,7 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 
 	@Override
 	public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-		if(cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+		if(cap == ForgeCapabilities.ITEM_HANDLER) {
 			return lazyItemHandler.cast();
 		}
 
@@ -156,42 +149,29 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 
 	private static void craftItem(MixingStationBlockEntity pEntity) {
 		Level level = pEntity.level;
-
 		SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+
 		for(int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
 			inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
 		}
 
 		Optional<MixingStationRecipe> recipe = level.getRecipeManager().getRecipeFor(MixingStationRecipe.Type.INSTANCE, inventory, level);
 
+		int bottles = countBottles(pEntity);
 
-//		if(recipe.get().getRecipeItems().get(0).test(new ItemStack(ModItems.NUKA_COLA.get()))) {
-//			if (Minecraft.getInstance().player != null) { // String.valueOf(itemsCounter) + " " + String.valueOf(recipeItems.size())
-//					Minecraft.getInstance().player.displayClientMessage(Component.literal("NukaCola Found"), false);
-//			}
-//		}
-
-		int bottles = 0;
 		if(hasRecipe(pEntity)) {
-//			if(recipe.get().hasItem(new ItemStack(ModItems.NUKA_COLA.get()))) {
-//				pEntity.itemHandler.extractItem(0,1,false);
-//				bottles++;
-//			}
-
-			for(int i = 0; i < inventory.getContainerSize(); i++) {
-				if(!inventory.getItem(i).isEmpty()) {
-					if(inventory.getItem(i).is(ModTags.Items.NUKACOLAS)) {
-						bottles++;
-					}
+			for(int i = 0; i < 12; i++) {
+				if(!pEntity.itemHandler.getStackInSlot(i).isEmpty()) {
 					pEntity.itemHandler.extractItem(i, 1, false);
 				}
 			}
 
 			// ADD ITEM RESULT
-			pEntity.itemHandler.setStackInSlot(13, new ItemStack(recipe.get().getResultItem().getItem(), pEntity.itemHandler.getStackInSlot(13).getCount() + 1));
+			pEntity.itemHandler.insertItem(13, new ItemStack(recipe.get().getResultItem().getItem()), false);
+
 			// ADD EMPTY BOTTLES MINUS ONE IN THEIR SLOT
-			if(bottles - 1 >= 0) {
-				pEntity.itemHandler.setStackInSlot(12, new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get(), pEntity.itemHandler.getStackInSlot(12).getCount() + bottles - 1));
+			if(bottles >= 0) {
+				pEntity.itemHandler.setStackInSlot(12, new ItemStack(ModItems.EMPTY_ROCKET_BOTTLE.get(), pEntity.itemHandler.getStackInSlot(12).getCount() + bottles));
 			}
 
 			level.playSound(null, pEntity.getBlockPos(), SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, .5f, 0f);
@@ -201,15 +181,22 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 
 	private static boolean hasRecipe(MixingStationBlockEntity pEntity) {
 		Level level = pEntity.level;
-
 		SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+
+		int bottles = countBottles(pEntity);
+
 		for(int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
 			inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
 		}
 
 		Optional<MixingStationRecipe> recipe = level.getRecipeManager().getRecipeFor(MixingStationRecipe.Type.INSTANCE, inventory, level);
 
-		return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem());
+//		if (Minecraft.getInstance().player != null) { // String.valueOf(itemsCounter) + " " + String.valueOf(recipeItems.size())
+//			Minecraft.getInstance().player.displayClientMessage(Component.literal(String.valueOf(String.valueOf(bottles) + " - " + String.valueOf(neg_bottles) + " - " + String.valueOf(neg_neg_bottles))), false);
+//		}
+
+		return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem())
+				&& canInsertAmountIntoBottleSlot(inventory, bottles);
 	}
 
 	private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack itemStack) {
@@ -218,5 +205,19 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 
 	private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
 		return inventory.getItem(13).getMaxStackSize() > inventory.getItem(13).getCount();
+	}
+
+	private static boolean canInsertAmountIntoBottleSlot(SimpleContainer inventory, int bottles) {
+		return inventory.getItem(12).getMaxStackSize() > inventory.getItem(12).getCount() + bottles;
+	}
+
+	private static int countBottles(MixingStationBlockEntity pEntity) {
+		int bottles = -1;
+		for(int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
+			if(!pEntity.itemHandler.getStackInSlot(i).isEmpty() && pEntity.itemHandler.getStackInSlot(i).is(ModTags.Items.NUKACOLAS)) {
+				bottles++;
+			}
+		}
+		return bottles;
 	}
 }

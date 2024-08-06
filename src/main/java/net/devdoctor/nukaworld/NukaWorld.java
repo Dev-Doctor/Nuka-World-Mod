@@ -8,6 +8,7 @@ import net.devdoctor.nukaworld.recipe.ModRecipes;
 import net.devdoctor.nukaworld.screen.MixingStationScreen;
 import net.devdoctor.nukaworld.screen.ModMenuTypes;
 import net.devdoctor.nukaworld.sound.ModSounds;
+import net.devdoctor.nukaworld.world.ModConfiguredFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -54,6 +55,9 @@ public class NukaWorld {
         // REGISTER RECIPES
         ModRecipes.register(eventBus);
 
+        // REGISTER WORLD CONFIGS
+        ModConfiguredFeatures.register(eventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -61,7 +65,7 @@ public class NukaWorld {
     private void ClientSetup(final FMLClientSetupEvent event) {
         /* -------------------------- NEED TO UPDATE, DOESN'T WORK IN 1.19.2 -------------------------- */
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.NUKA_COLA.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(ModBlocks.TATO_PLANT.get(), RenderType.cutout());
+//        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TATO_PLANT.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.CITRUS_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.CITRUS_LEAVES.get(), RenderType.cutout());
 

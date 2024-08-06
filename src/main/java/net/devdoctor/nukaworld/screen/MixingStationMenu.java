@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class MixingStationMenu extends AbstractContainerMenu {
@@ -36,7 +36,7 @@ public class MixingStationMenu extends AbstractContainerMenu {
 		addPlayerInventory(inventory);
 		addPlayerHotbar(inventory);
 
-		this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(iItemHandler -> {
+		this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
 			// NUKA COLA
 			this.addSlot(new LimitedSlotItemHandler(iItemHandler, 0, 7, 35, ModItems.NUKA_COLA.get()));
 			// NUKA COLA CHERRY

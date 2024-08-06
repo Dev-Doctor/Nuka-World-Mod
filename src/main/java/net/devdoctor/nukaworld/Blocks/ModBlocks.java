@@ -5,6 +5,7 @@ import net.devdoctor.nukaworld.CreativeTabs.ModCreativeTabs;
 import net.devdoctor.nukaworld.Items.ModItems;
 import net.devdoctor.nukaworld.NukaWorld;
 // import net.devdoctor.nukaworld.world.feature.CitrusTreeGrower; NEED TO UPDATE, DOESN'T WORK IN 1.19.2
+import net.devdoctor.nukaworld.world.CitrusTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -75,7 +76,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MIXING_STATION = registerBlock("mixing_station", () -> new MixingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), ModCreativeTabs.NUKA_WORLD);
 
     /* -------------------------- NEED TO UPDATE, DOESN'T WORK IN 1.19.2 -------------------------- */
-    //public static final RegistryObject<Block> CITRUS_SAPLING = registerBlock("citrus_sapling", () -> new SaplingBlock(new CitrusTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTabs.NUKA_WORLD);
+    public static final RegistryObject<Block> CITRUS_SAPLING = registerBlock("citrus_sapling", () -> new SaplingBlock(new CitrusTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTabs.NUKA_WORLD);
 
     public static final RegistryObject<Block> CITRUS_LEAVES = registerBlock("citrus_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
