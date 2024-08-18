@@ -5,20 +5,21 @@
       "item": "nukaworld:sugar_rocket_bottle"
     },
     {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "minecraft:brown_dye"
-    },
-    {
       "item": "minecraft:iron_nugget"
     },
     {
-      "item": "minecraft:melon_slice"
+      "item": "minecraft:orange_dye"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+
+    {
+      "item": "minecraft:sweet_berries"
     }
   ],
   "result": {
-    "item": "nukaworld:nuka_cola",
+    "item": "nukaworld:nuka_cola_cherry",
     "count": 1
   }
 }

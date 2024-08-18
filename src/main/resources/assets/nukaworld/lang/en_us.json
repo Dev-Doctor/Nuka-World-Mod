@@ -19,6 +19,10 @@
   "item.nukaworld.vodka": "Vodka",
   "item.nukaworld.rum": "Rum",
   "item.nukaworld.bourbon": "Bourbon",
+  "item.nukaworld.dirty_water": "Dirty Water",
+  "item.nukaworld.med_x": "Med-X",
+
+  "item.tooltip.nukaworld.nukacola.missingeffects": "This Nuka-Cola currently gives no effects when drunk.",
 
   "block.nukaworld.nuka_cola_block": "Nuka-Cola",
   "block.nukaworld.nuka_cola_cherry_block": "Nuka-Cola Cherry",
@@ -67,9 +71,10 @@
 
   "sounds.nukaworld.nuka_cola_drink": "Drinks Nuka-Cola",
 
+  "effect.nukaworld.poison_resistance": "Poison Resistance",
+
   "itemGroup.nukacola_tab": "NukaWorld - NukaColas",
   "itemGroup.nukaworld_tab": "NukaWorld - Components",
-
 
 
   "advancement.root.title": "Nuka-Cola",

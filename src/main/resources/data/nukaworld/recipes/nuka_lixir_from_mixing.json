@@ -1,0 +1,17 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola"
+    },
+    {
+      "item": "nukaworld:nuka_cola_orange"
+    },
+    {
+      "item": "nukaworld:med_x"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_lixir"
+  }
+}

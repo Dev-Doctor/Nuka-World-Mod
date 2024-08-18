@@ -61,7 +61,7 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 				switch (index) {
 					case 0 -> MixingStationBlockEntity.this.progress = value;
 					case 1 -> MixingStationBlockEntity.this.maxProgress = value;
-				};
+				}
 			}
 
 			@Override
@@ -219,5 +219,9 @@ public class MixingStationBlockEntity extends BlockEntity implements MenuProvide
 			}
 		}
 		return bottles;
+	}
+
+    public ItemStack getRenderStack() {
+    	return itemHandler.getStackInSlot(13);
 	}
 }

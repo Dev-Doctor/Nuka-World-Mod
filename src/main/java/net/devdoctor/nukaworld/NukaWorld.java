@@ -4,15 +4,13 @@ import com.mojang.logging.LogUtils;
 import net.devdoctor.nukaworld.Blocks.ModBlocks;
 import net.devdoctor.nukaworld.Blocks.entity.ModBlockEntities;
 import net.devdoctor.nukaworld.Items.ModItems;
+import net.devdoctor.nukaworld.effect.ModEffects;
 import net.devdoctor.nukaworld.recipe.ModRecipes;
 import net.devdoctor.nukaworld.screen.MixingStationScreen;
 import net.devdoctor.nukaworld.screen.ModMenuTypes;
 import net.devdoctor.nukaworld.sound.ModSounds;
 import net.devdoctor.nukaworld.world.ModConfiguredFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -46,10 +44,13 @@ public class NukaWorld {
         // REGISTER SOUNDS
         ModSounds.register(eventBus);
 
-        //REGISTER BLOCK ENTITIES
+        // REGISTER EFFECTS
+        ModEffects.register(eventBus);
+
+        // REGISTER BLOCK ENTITIES
         ModBlockEntities.register(eventBus);
 
-        //REGISTER GUIs
+        // REGISTER GUIs
         ModMenuTypes.register(eventBus);
 
         // REGISTER RECIPES

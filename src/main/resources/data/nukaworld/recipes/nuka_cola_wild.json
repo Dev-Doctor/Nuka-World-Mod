@@ -2,23 +2,24 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "minecraft:iron_nugget"
+    },
+    {
       "item": "nukaworld:sugar_rocket_bottle"
     },
     {
-      "item": "minecraft:coal"
+      "item": "minecraft:bone_meal"
     },
     {
-      "item": "minecraft:brown_dye"
+      "item": "minecraft:carrot"
     },
-    {
-      "item": "minecraft:iron_nugget"
-    },
+
     {
       "item": "minecraft:melon_slice"
     }
   ],
   "result": {
-    "item": "nukaworld:nuka_cola",
+    "item": "nukaworld:nuka_cola_wild",
     "count": 1
   }
 }

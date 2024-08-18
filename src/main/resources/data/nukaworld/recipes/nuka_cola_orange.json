@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "nukaworld:sugar_rocket_bottle"
+    },
+    {
+      "item": "nukaworld:orange"
+    },
+    {
+      "item": "nukaworld:carrot_flower"
+    },
+    {
+      "item": "minecraft:pumpkin_seeds"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:nuka_cola_orange",
+    "count": 1
+  }
+}

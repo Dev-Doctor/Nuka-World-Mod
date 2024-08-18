@@ -1,0 +1,9 @@
+{
+  "parent": "nukaworld:custom/mixing_station",
+  "render_type": "cutout",
+  "textures": {
+    "all": "nukaworld:block/mixing_station",
+    "particle": "nukaworld:block/mixing_station",
+    "0": "nukaworld:block/mixing_station"
+  }
+}

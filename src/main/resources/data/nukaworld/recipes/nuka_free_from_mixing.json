@@ -1,0 +1,14 @@
+{
+  "type": "nukaworld:nukacola_mixing",
+  "ingredients": [
+    {
+      "item": "nukaworld:nuka_cola"
+    },
+    {
+      "item": "nukaworld:dirty_water"
+    }
+  ],
+  "output": {
+    "item": "nukaworld:nuka_free"
+  }
+}

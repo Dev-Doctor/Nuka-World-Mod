@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "nukaworld:sugar_rocket_bottle"
+    },
+    {
+      "item": "nukaworld:super_concentrated_sugar"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+
+    {
+      "item": "minecraft:glistering_melon_slice"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:nuka_cola_victory",
+    "count": 1
+  }
+}

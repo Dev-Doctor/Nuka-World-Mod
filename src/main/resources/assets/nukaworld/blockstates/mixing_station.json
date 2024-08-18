@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "nukaworld:block/mixing_station"
+    },
+    "facing=south": {
+      "model": "nukaworld:block/mixing_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nukaworld:block/mixing_station",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "nukaworld:block/mixing_station",
+      "y": 90
+    }
+  }
+}

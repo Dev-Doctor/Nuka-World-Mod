@@ -14,6 +14,7 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> NUKA_COLA_DRINK = registerSoundEvent("nuka_cola_drink");
     public static final RegistryObject<SoundEvent> NUKA_WORLD_THEME = registerSoundEvent("nuka_world_theme");
+    public static final RegistryObject<SoundEvent> USE_MED = registerSoundEvent("use_med");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENT.register(name, () -> new SoundEvent(new ResourceLocation(NukaWorld.MOD_ID, name)));

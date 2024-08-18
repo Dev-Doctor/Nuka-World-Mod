@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "nukaworld:sugar_rocket_bottle"
+    },
+    {
+      "item": "minecraft:pufferfish"
+    },
+    {
+      "item": "minecraft:black_dye"
+    },
+
+    {
+      "item": "nukaworld:bourbon"
+    }
+  ],
+  "result": {
+    "item": "nukaworld:nuka_cola_dark",
+    "count": 1
+  }
+}

@@ -5,6 +5,12 @@
       "nukaworld:nuka_cola_drink"
     ]
   },
+  "use_med": {
+  "subtitle": "sounds.nukaworld.use_med",
+  "sounds": [
+    "nukaworld:use_med"
+  ]
+},
   "nuka_world_theme": {
     "sounds": [
       {

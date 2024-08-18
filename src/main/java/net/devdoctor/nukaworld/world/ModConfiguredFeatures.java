@@ -4,7 +4,6 @@ import net.devdoctor.nukaworld.Blocks.ModBlocks;
 import net.devdoctor.nukaworld.NukaWorld;
 import net.minecraft.core.Registry;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
